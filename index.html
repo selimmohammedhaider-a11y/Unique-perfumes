@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unique Perfumes - Essence of Elegance</title>
+    <title>Unique Perfumes - Luxury Collection</title>
     <style>
-        /* ستايل المينيماليزم الفخم - أبيض وأسود */
+        /* Modern Black & White Luxury Theme */
         body {
             background-color: #000;
             color: #fff;
@@ -16,20 +16,19 @@
         }
 
         header {
-            padding: 60px 20px;
+            padding: 50px 20px;
             border-bottom: 1px solid #1a1a1a;
         }
 
         .logo {
-            max-width: 300px;
+            max-width: 280px;
             height: auto;
-            /* عملت invert عشان اللوجو يظهر أبيض على الأسود */
             filter: brightness(0) invert(1);
         }
 
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
             padding: 60px 20px;
             max-width: 1200px;
@@ -37,26 +36,25 @@
         }
 
         .product-card {
-            background-color: #050505;
-            border: 1px solid #1a1a1a;
-            padding: 20px;
-            transition: all 0.4s ease;
-            position: relative;
+            background-color: #080808;
+            border: 1px solid #151515;
+            padding: 25px;
+            transition: all 0.5s ease;
         }
 
         .product-card:hover {
             border-color: #ffffff;
             transform: translateY(-10px);
+            background-color: #111;
         }
 
         .product-card img {
             width: 100%;
-            height: 380px;
+            height: 400px;
             object-fit: contain;
             margin-bottom: 25px;
-            /* تأثير الأبيض والأسود اللي بيقلب ألوان عند اللمس */
             filter: grayscale(100%);
-            transition: 0.6s ease;
+            transition: 0.5s;
         }
 
         .product-card:hover img {
@@ -64,49 +62,48 @@
         }
 
         .product-name {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             letter-spacing: 3px;
             text-transform: uppercase;
-            margin-bottom: 5px;
-            color: #fff;
+            margin-bottom: 8px;
         }
 
-        .brand-label {
-            font-size: 0.8rem;
-            color: #666;
-            letter-spacing: 2px;
+        .brand-name {
+            font-size: 0.85rem;
+            color: #888;
+            letter-spacing: 1px;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="9034.png" alt="Unique Perfumes Logo" class="logo">
+        <img src="9034.png" alt="Unique Perfumes" class="logo">
     </header>
 
     <div class="gallery">
         <div class="product-card">
-            <img src="9030.jpg" alt="Jean Paul Gaultier">
+            <img src="9030.jpg" alt="Le Male Le Parfum">
             <div class="product-name">Le Male Le Parfum</div>
-            <div class="brand-label">JEAN PAUL GAULTIER</div>
+            <div class="brand-name">JEAN PAUL GAULTIER</div>
         </div>
 
         <div class="product-card">
             <img src="9031.jpg" alt="Versace Eros">
             <div class="product-name">Eros</div>
-            <div class="brand-label">VERSACE</div>
+            <div class="brand-name">VERSACE</div>
         </div>
 
         <div class="product-card">
             <img src="9032.jpg" alt="YSL MYSLF">
             <div class="product-name">MYSLF</div>
-            <div class="brand-label">YVES SAINT LAURENT</div>
+            <div class="brand-name">YVES SAINT LAURENT</div>
         </div>
 
         <div class="product-card">
-            <img src="9033.jpg" alt="YSL Y">
+            <img src="9033.jpg" alt="Y Eau de Parfum">
             <div class="product-name">Y Le Parfum</div>
-            <div class="brand-label">YVES SAINT LAURENT</div>
+            <div class="brand-name">YVES SAINT LAURENT</div>
         </div>
     </div>
 
