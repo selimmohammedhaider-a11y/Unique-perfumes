@@ -4,329 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unique Perfumes | Essence of Elegance</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         /* Global Styles */
-        :root {
-            --main-bg: #ffffff;
-            --dark-section: #1a1a1a;
-            --footer-bg: #222222;
-            --text-gray: #666;
-            --accent: #2d5a4c; /* matching the logo green */
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        /* Top Bar */
-        .top-bar {
-            background: #000;
-            color: #fff;
-            padding: 5px 10%;
-            font-size: 12px;
-            text-align: right;
-        }
-
-        /* Navigation */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 10%;
-            background: #fff;
-            border-bottom: 1px solid #eee;
-        }
-
-        .logo-container img {
-            height: 60px; /* تصغير اللوجو كما طلبت */
-            width: auto;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            margin: 0;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #444;
-            font-size: 14px;
-            font-weight: 500;
-            text-transform: uppercase;
-        }
-
-        .cart-btn {
-            background: #f5f5f5;
-            padding: 8px 15px;
-            border: 1px solid #ddd;
-            text-transform: uppercase;
-            font-size: 13px;
-            cursor: pointer;
-        }
-
-        /* Hero Slider Area */
-        .hero {
-            position: relative;
-            height: 500px;
-            background: url('9035.jpg') center/cover no-repeat;
-            display: flex;
-            align-items: center;
-            color: white;
-        }
-
-        .hero-overlay {
-            padding-left: 10%;
-            max-width: 500px;
-        }
-
-        .hero h1 {
-            font-size: 40px;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-
-        .btn-more {
-            background: #000;
-            color: #fff;
-            padding: 12px 25px;
-            border: none;
-            cursor: pointer;
-            text-transform: uppercase;
-            margin-top: 20px;
-        }
-
-        /* About Us Section (Matching Layout) */
-        .about-section {
-            display: flex;
-            padding: 80px 10%;
-            align-items: center;
-            gap: 50px;
-        }
-
-        .about-img {
-            flex: 1;
-        }
-
-        .about-img img {
-            width: 100%;
-            box-shadow: 20px 20px 0px #f0f0f0;
-        }
-
-        .about-text {
-            flex: 1;
-        }
-
-        .about-text h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-            letter-spacing: 2px;
-        }
-
-        /* Products Grid */
-        .popular-products {
-            padding: 60px 10%;
-            text-align: center;
-            background: #fafafa;
-        }
-
-        .section-title {
-            font-size: 28px;
-            text-transform: uppercase;
-            margin-bottom: 40px;
-            letter-spacing: 3px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .product-card {
-            background: #fff;
-            padding: 20px;
-            border: 1px solid #eee;
-            transition: 0.3s;
-        }
-
-        .product-card:hover {
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-        }
-
-        .product-card img {
-            width: 100%;
-            height: 250px;
-            object-fit: contain;
-        }
-
-        .product-card h4 {
-            margin: 15px 0 5px;
-            font-size: 15px;
-        }
-
-        .price {
-            color: #888;
-            font-weight: bold;
-        }
-
-        /* Footer */
-        footer {
-            background: #111;
-            color: #ccc;
-            padding: 60px 10% 20px;
-            font-size: 13px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-col h5 {
-            color: #fff;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-            font-size: 15px;
-        }
-
-        .footer-col ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer-col ul li {
-            margin-bottom: 10px;
-        }
-
-        .newsletter input {
-            padding: 10px;
-            width: 70%;
-            border: none;
-        }
-
-        .newsletter button {
-            padding: 10px;
-            background: #444;
-            color: #fff;
-            border: none;
-        }
-
-        .copyright {
-            text-align: center;
-            border-top: 1px solid #222;
-            padding-top: 20px;
-        }
+        body { font-family: sans-serif; margin: 0; text-align: center; background: #fff; }
+        nav { display: flex; justify-content: space-around; align-items: center; padding: 20px; border-bottom: 1px solid #eee; }
+        .logo { height: 50px; }
+        .hero { width: 100%; height: 400px; background: #f4f4f4; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .hero img { width: 100%; object-fit: cover; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 40px; }
+        .card { border: 1px solid #eee; padding: 15px; }
+        .card img { width: 100%; height: 200px; object-fit: contain; }
+        footer { background: #111; color: #fff; padding: 40px; margin-top: 40px; }
     </style>
 </head>
 <body>
 
-    <div class="top-bar">
-        <i class="fas fa-phone"></i> CALL US TODAY: (000) 123-456
-    </div>
-
     <nav>
-        <div class="logo-container">
-            <img src="9034.png" alt="Unique Perfumes Logo">
-        </div>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Shop Online</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Contact Us</a></li>
-        </ul>
-        <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Cart</button>
+        <img src="Gemini_Generated_Image_5gyef...jpg" class="logo" alt="Logo">
+        <div>Home | Shop | About</div>
     </nav>
 
-    <section class="hero">
-        <div class="hero-overlay">
-            <h1>LOREM IPSUM IS SIMPLY</h1>
-            <p>Dummy text of the printing & typesetting industry.</p>
-            <button class="btn-more">Learn More</button>
-        </div>
-    </section>
+    <div class="hero">
+        <img src="2c0ad02e3e7619b20ad0d8334fc...jpg" alt="Hero">
+    </div>
 
-    <section class="about-section">
-        <div class="about-img">
-            <img src="9032.jpg" alt="About Our Perfumes">
+    <div class="grid">
+        <div class="card">
+            <img src="e1c1e42f2a94711da49686e8b171b...jpg">
+            <h4>Product 1</h4>
         </div>
-        <div class="about-text">
-            <h2>ABOUT US</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-            <button class="btn-more" style="background: #000;">Read More</button>
+        <div class="card">
+            <img src="ef4fcda30a8be27a848eb98e727...jpg">
+            <h4>Product 2</h4>
         </div>
-    </section>
-
-    <section class="popular-products">
-        <h2 class="section-title">Popular Products</h2>
-        <div class="grid">
-            <div class="product-card">
-                <img src="9030.jpg" alt="Product 1">
-                <h4>LE MALE LE PARFUM</h4>
-                <p class="price">$149.00 USD</p>
-            </div>
-            <div class="product-card">
-                <img src="9031.jpg" alt="Product 2">
-                <h4>VERSACE EROS</h4>
-                <p class="price">$149.00 USD</p>
-            </div>
-            <div class="product-card">
-                <img src="9032.jpg" alt="Product 3">
-                <h4>YSL MYSLF</h4>
-                <p class="price">$149.00 USD</p>
-            </div>
-            <div class="product-card">
-                <img src="9033.jpg" alt="Product 4">
-                <h4>YSL Y LE PARFUM</h4>
-                <p class="price">$149.00 USD</p>
-            </div>
+        <div class="card">
+            <img src="f4b310938c9391058623879c583...jpg">
+            <h4>Product 3</h4>
         </div>
-    </section>
+    </div>
 
     <footer>
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h5>About Us</h5>
-                <p>Leading provider of luxury fragrances and unique scents for the modern world.</p>
-            </div>
-            <div class="footer-col">
-                <h5>Quick Links</h5>
-                <ul>
-                    <li>Home</li>
-                    <li>Privacy Policy</li>
-                    <li>Contact</li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h5>Find Us On</h5>
-                <p><i class="fas fa-map-marker-alt"></i> 123 Perfume St, Elegance City</p>
-                <div style="font-size: 20px; gap: 10px; display: flex;">
-                    <i class="fab fa-facebook"></i> <i class="fab fa-instagram"></i> <i class="fab fa-twitter"></i>
-                </div>
-            </div>
-            <div class="footer-col newsletter">
-                <h5>News & Updates</h5>
-                <input type="email" placeholder="Enter your email">
-                <button>Sign Up</button>
-            </div>
-        </div>
-        <div class="copyright">
-            Copyright © 2026. Unique Perfumes. All Rights Reserved.
-        </div>
+        Unique Perfumes © 2026
     </footer>
 
 </body>
